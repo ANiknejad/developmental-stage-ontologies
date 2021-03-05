@@ -46,6 +46,68 @@ property_value: start_dpf "0.0" xsd:float
 property_value: end_dpf "45.0" xsd:float
 
 [Term]
+id: SscrDv:0000087
+name: zygote stage
+namespace: pig_developmental_stage
+def: "A stage at which the organism is a single cell produced by means of sexual reproduction." [UBERON:0000106]
+xref: UBERON:0000106
+is_a: SscrDv:0000000 ! life cycle stage
+relationship: part_of SscrDv:0000079 ! early embryonic stage
+property_value: start_dpf "0.0" xsd:float
+
+[Term]
+id: SscrDv:0000088
+name: cleavage stage
+namespace: pig_developmental_stage
+def: "Embryonic stage consisting of division of cells in the early embryo." [UBERON:0000107 "adapted from"]
+comment: The different cells derived from cleavage are called blastomeres and form a compact mass called the morula. Cleavage ends with the formation of the blastula.
+xref: UBERON:0000107
+is_a: SscrDv:0000000 ! life cycle stage
+relationship: part_of SscrDv:0000079 ! early embryonic stage
+relationship: immediately_preceded_by SscrDv:0000087 ! zygote stage
+
+[Term]
+id: SscrDv:0000089
+name: blastula stage
+namespace: pig_developmental_stage
+def: "Embryonic stage that is an early stage of embryonic development in animals and is produced by cleavage of a fertilized ovum, with formation of a central fluid-filled cavity called the blastocoel." [UBERON:0000108 "adapted from"]
+xref: UBERON:0000108
+is_a: SscrDv:0000000 ! life cycle stage
+relationship: part_of SscrDv:0000079 ! early embryonic stage
+relationship: immediately_preceded_by SscrDv:0000088 ! cleavage stage
+
+[Term]
+id: SscrDv:0000090
+name: gastrula stage
+namespace: pig_developmental_stage
+def: "Embryonic stage defined by complex and coordinated series of cellular movements that occurs at the end of cleavage, resulting in the formation of the three primary germ layers, ectoderm, mesoderm and endoderm." [UBERON:0000109 "adapted from"]
+xref: UBERON:0000109
+is_a: SscrDv:0000000 ! life cycle stage
+relationship: part_of SscrDv:0000079 ! early embryonic stage
+relationship: immediately_preceded_by SscrDv:0000089 ! blastula stage
+
+[Term]
+id: SscrDv:0000091
+name: neurula stage
+namespace: pig_developmental_stage
+def: "Embryonic stage defined by formation of a tube from the flat layer of ectodermal cells known as the neural plate." [UBERON:0000110 "adapted from"]
+xref: UBERON:0000110
+is_a: SscrDv:0000000 ! life cycle stage
+relationship: part_of SscrDv:0000079 ! early embryonic stage
+relationship: immediately_preceded_by SscrDv:0000090 ! gastrula stage
+
+[Term]
+id: SscrDv:0000086
+name: organogenesis stage
+namespace: pig_developmental_stage
+def: "Embryonic stage at which the ectoderm, endoderm, and mesoderm develop into the internal organs of the organism." [UBERON:0000111 "adapted from"]
+xref: UBERON:0000111
+is_a: SscrDv:0000000 ! life cycle stage
+relationship: part_of SscrDv:0000079 ! early embryonic stage
+relationship: immediately_preceded_by SscrDv:0000091 ! neurula stage
+property_value: end_dpf "45.0" xsd:float
+
+[Term]
 id: SscrDv:0000081
 name: ridge limb stage
 namespace: pig_developmental_stage
@@ -53,7 +115,7 @@ def: "Pig fetal stage when the developing limb begins to grow out from the flank
 comment: This stage is defined at embryonic day 20 during pig development (see https://www.ncbi.nlm.nih.gov//pubmed/28335721).
 subset: granular_stage
 is_a: SscrDv:0000000 ! life cycle stage
-relationship: part_of SscrDv:0000079 ! early embryonic stage
+relationship: part_of SscrDv:0000086 ! organogenesis stage
 
 [Term]
 id: SscrDv:0000082
@@ -63,7 +125,7 @@ def: "Pig fetal stage when the developing limb looks like a semicircle that is a
 comment: This stage is defined at embryonic day 22 during pig development (see https://www.ncbi.nlm.nih.gov//pubmed/28335721).
 subset: granular_stage
 is_a: SscrDv:0000000 ! life cycle stage
-relationship: part_of SscrDv:0000079 ! early embryonic stage
+relationship: part_of SscrDv:0000086 ! organogenesis stage
 relationship: immediately_preceded_by SscrDv:0000081 ! ridge limb stage
 
 [Term]
@@ -74,7 +136,7 @@ def: "Pig fetal stage when the developing limb looks like a hand-plate." [Bgee:c
 comment: This stage is defined at embryonic day 26 during pig development (see https://www.ncbi.nlm.nih.gov//pubmed/28335721).
 subset: granular_stage
 is_a: SscrDv:0000000 ! life cycle stage
-relationship: part_of SscrDv:0000079 ! early embryonic stage
+relationship: part_of SscrDv:0000086 ! organogenesis stage
 relationship: immediately_preceded_by SscrDv:0000082 ! bud limb stage
 
 [Term]
@@ -84,7 +146,7 @@ namespace: pig_developmental_stage
 def: "Prenatal stage that refers to fetal pig development over 45 days of gestation." [Bgee:curator "Bgee"]
 comment: We define pig early and late embryonic stages based on fetal growth (see https://www.ncbi.nlm.nih.gov/pubmed/15446468).
 is_a: SscrDv:0000000 ! life cycle stage
-xref: UBERON:0000111
+xref: UBERON:0007220
 relationship: part_of SscrDv:0000002 ! prenatal stage
 relationship: immediately_preceded_by SscrDv:0000079 ! early embryonic stage
 property_value: start_dpf "45.0" xsd:float
