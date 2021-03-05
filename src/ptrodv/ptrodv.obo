@@ -495,7 +495,7 @@ synonym: "late adult stage" EXACT []
 xref: UBERON:0007222
 is_a: PtroDv:0000000!  life cycle stage
 relationship: part_of PtroDv:0000011 ! mature stage
-relationship: preceded_by PtroDv:0000007 ! adulthood stage
+relationship: preceded_by PtroDv:0000012 ! adulthood stage
 property_value: start_ypb "34.0" xsd:float
 
 [Term]
